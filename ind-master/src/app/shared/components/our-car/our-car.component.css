@@ -1,0 +1,25 @@
+#viewer {
+    width: 600px;
+    height: 400px; 
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+  }
+  
+  #viewer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    overflow: hidden;
+  }
+
+  
+  

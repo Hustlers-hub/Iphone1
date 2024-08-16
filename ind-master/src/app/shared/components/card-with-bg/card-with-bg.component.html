@@ -1,0 +1,14 @@
+<!-- src/app/shared/components/card-with-bg/card-with-bg.component.html -->
+
+    <div class="d-flex align-items-center position-relative w-100 p-0" 
+         [style.background-image]="'url(' + bgImg + ')'" 
+         style="height: 500px; background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+      <div class="position-relative p-5" style="z-index: 1;">
+        <h3 class="text-white">{{ title }}</h3>
+        <p class="text-white">{{ desc }}</p>
+        <button class="btn btn-light">Check here !</button>
+      </div>
+    </div>
+
+  

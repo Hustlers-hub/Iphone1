@@ -1,0 +1,5 @@
+
+            <div id="viewer" #viewer>
+                <img *ngFor="let image of images; let i = index" [src]="image" [alt]="'360 Image ' + (i + 2)" [style.display]="i === 0 ? 'block' : 'none'">
+        </div>
+  

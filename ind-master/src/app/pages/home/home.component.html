@@ -1,0 +1,86 @@
+<!-- src/app/pages/home/home.component.html -->
+<div class="header d-flex align-items-center p-5" style="background-image: url('assets/header.jpeg');">
+    <div class="m-lg-5">
+        <h1 class="text-white">{{headerMessage}}</h1>
+        <button class="btn btn-light mt-3 p-2">JOIN US NOW</button>
+    </div>   
+</div>
+<div class="">
+    <div class="row">
+        <div class=" col-lg-6 col-sm-12 d-flex align-items-center">
+            <div class="m-lg-5 p-3">
+                <h3 class="">Welcome to IND Trucks</h3><br>
+                <p class="a">Find out more about what we do, get to know our trucks and services, and read the
+                    latest news, company info and press releases.</p>
+                    <button class="btn btn-dark">Check here !</button>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 m-0 p-0">
+            <img src="./assets/truckInWater.jpeg " style="width: 100%; height: auto;">
+        </div>
+    </div>
+</div>
+<!-- src/app/pages/home/home.component.html -->
+ <div class="">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 p-0">
+            <app-card-with-bg [title]="Maintitle" [desc]="Maindesc" [bgImg]="Image"></app-card-with-bg>
+        </div>
+
+        <div class="col-lg-6 col-sm-12 p-0">
+            <app-card-with-bg [title]="Maintitle1" [desc]="Maindesc1" [bgImg]="Image1"></app-card-with-bg>
+        </div>
+    </div>
+ </div>
+
+ <div class="container">
+    <div class="row" style="margin-top:50px; margin-bottom: 40px; padding-left: 15px;"><h1>Press releases</h1></div>
+    <div class="row">
+        <div class="col-lg-4 col-sm-12"  *ngFor="let cardWithoutBg of cardWithoutBgList">
+            <app-card-without-bg 
+                [title]="cardWithoutBg.title" 
+                [desc]="cardWithoutBg.desc" 
+                [bgImg]="cardWithoutBg.image">
+            </app-card-without-bg>
+        </div>
+    </div>
+ </div>
+
+ <div class="p-5" style="background-color: rgb(241, 241, 241);">
+    <div class="row ">
+        <div class="col-lg-12 text-center mb-5 "><h4>Subscribe to IND Trucks Press releases</h4></div>
+        <div class="col-lg-12">
+            <form #subscribeForm="ngForm" class="d-flex align-items-center justify-content-center " (ngSubmit)="onClick(subscribeForm)">
+                <div>
+                  <input placeholder="Email Address" style="border:1px solid rgb(36, 36, 36)" class="w-100 form-control"  type="email" id="email" name="email" ngModel required>
+                </div>
+                <button class="btn btn-light" style="margin-left: 15px; border:1px solid rgb(36, 36, 36)" type="submit">Subscribe</button>
+              </form>              
+        </div>
+    </div>
+ </div>
+
+ <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <app-our-car></app-our-car>
+        </div>
+        <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center text-center">
+            <h1 class="top-100 text-uppercase text-nowrap">Our Upcoming Car</h1>
+            <p class="text-nowrap">View in 360&deg;</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 d-flex align-items-center justify-content-center">
+          <div class="m-lg-5 p-3 text-center">
+            <h2 class="text-center">{{ (quotes | getRandomInList)?.text  }}</h2>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+
